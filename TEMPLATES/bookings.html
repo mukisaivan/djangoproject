@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Official Website for Kasubi Nakulabye Skills Associations Limited"
+        />
+        <title>Eruna Safaris</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/utils.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css" >
+    </head>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            screens : {
+                sm: '480px',
+                md: '768px',
+                lg: '976px',
+                xl: '1440px',
+            },
+            extend: {
+                colors: {
+                    primary: 'hsl(180, 100%, 20%)',
+                    primaryDark: 'hsl(180, 100%, 15%)',
+                    primaryLight: 'hsl(180, 100%, 30%)',
+                    headerBg: 'hsla(157, 47%, 90%, .8)',
+                    hoverBackgroundColor: 'hsla(157, 47%, 90%, 1)',
+                }
+            },
+            fontSize: {
+                'xs': '.85rem',
+                'sm': '.975rem',
+                'tiny': '.975rem',
+                'base': '1.1rem',
+                'lg': '1.325rem',
+                'xl': '1.35rem',
+                '2xl': '1.6rem',
+                '3xl': '1.975rem',
+                '4xl': '2.35rem',
+                '5xl': '3rem',
+                '6xl': '4rem',
+                '7xl': '6rem',
+            }
+          }
+        }
+      </script>
+
+    <body>
+
+        <!-- header -->
+        <header class="sticky top-0 w-12/12 grid items-center bg-headerBg hover:bg-hoverBackgroundColor transition-colors duration-300 ease-in-out">
+            <nav class="flex gap-5 items-center justify-between py-3 md:px-3 w-10/12 md:w-9/12 mx-auto">
+                <div class="logo">
+                    <a href="./index.html">
+                        <h2 class="text-2xl font-semibold text-primaryDark">ErunaSafaris</h2>
+                    </a>
+                </div>
+                <ul class="hidden md:flex gap-10 list-inside items-center justify-between">
+                    <li>
+                        <a href="" class="text-xl font-medium text-primaryDark hover:text-primaryDark font-bold">Home</a>
+                    </li>
+                    <li>
+                        <a href="./destinations.html" class="text-xl font-medium text-primary hover:text-primaryDark">Destination</a>
+                    </li>
+                    <li>
+                        <a href="./cars.html" class="text-xl font-medium text-primary hover:text-primaryDark">Car Hire</a>
+                    </li>
+                    <li>
+                        <a href="./bookings.html" class="text-xl font-medium text-primary hover:text-primaryDark">Bookings</a>
+                    </li>
+                    <li>
+                        <a href="./login.html" class="flex justify-center items-center text-xl font-medium text-white bg-primary hover:bg-primaryDark px-6 py-1 pb-2 transition-colors duration-300 ease-in-out rounded-full">Login</a>
+                    </li>
+                </ul>
+                <button class="flex md:hidden text-primary hover:text-primaryDark hover:font-medium fw-900 px-2 py-1 border border-solid border-primary rounded" id="md-tabs-activator">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </nav>
+            <ul class="grid list-inside p-5 md-tabs">
+                <li class="grid">
+                    <a href="./index.html" class="text-xl grid justify-center items-center text-primaryDark hover:text-primaryDark font-bold">Home</a>
+                </li>
+                <li class="grid">
+                    <a href="./destinations.html" class="text-xl grid justify-center items-center font-medium text-primary hover:text-primaryDark">Destination</a>
+                </li>
+                <li class="grid">
+                    <a href="./cars.html" class="text-xl grid justify-center items-center text-primary hover:text-primaryDark">Car Hire</a>
+                </li>
+                <li class="grid">
+                    <a href="./bookings.html" class="text-xl grid justify-center items-center text-primary hover:text-primaryDark">Bookings</a>
+                </li>
+                <li class="grid justify-center">
+                    <a href="./login.html" class="flex justify-center items-center text-xl grid justify-center font-medium text-white bg-primary hover:bg-primaryDark px-8 md:py-1 pb-2  transition-colors duration-300 ease-in-out rounded-full self-center justify-self-start">Login</a>
+                </li>
+            </ul>
+        </header>
+        <!-- header -->
+        
+        <section class="md:min-h-screen grid gap-8 my-5 mb-0 w-10/12 md:w-9/12 mx-auto content-start">
+            <div class="grid gap-2 px-2">
+                <h3 class="text-2xl text-primaryDark font-semibold">Travels</h3>
+                <hr>
+                <div class="grid gap-2">
+                    <div class="grid gap-1 p-2 px-4 rounded-md border border-solid border-slate-300">
+                        <div class="flex justify-between gap-0.5">
+                            <h3 class="text-xl font-medium text-primaryDark leading-8">
+                                Murchison Falls National Park
+                            </h3>
+                            <p class="text-xl font-semibold flex gap-0.5 items-baseline leading-8">
+                                <span class="font-medium text-primary">&dollar;</span>
+                                <span class="text-3xl text-primaryDark font-bold">100</span>
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 md:gap-6">
+                            <p class="text-base flex flex-wrap gap-1 leading-5">
+                                <span class="text-slate-900">Start Date: 12/12/2020</span>
+                                <span class="text-slate-900">End Date: 12/12/2020</span>
+                            </p>
+                            <p class="text-base flex flex-wrap gap-1 leading-5">
+                                <span class="text-slate-900">Booked On: </span>
+                                <span class="text-slate-900">12/12/2020</span>
+                            </p>
+                        </div>
+                        <p class="text-base flex flex-wrap gap-1 leading-5 font-medium text-primary">
+                            <span class="text-slate-900">Completed</span>
+                        </p>
+                    </div>
+                    <div class="grid gap-1 p-2 px-4 rounded-md border border-solid border-slate-300">
+                        <div class="flex justify-between gap-0.5">
+                            <h3 class="text-xl font-medium text-primaryDark leading-8">
+                                Queen Elizabeth National Park
+                            </h3>
+                            <p class="text-xl font-semibold flex gap-0.5 items-baseline leading-8">
+                                <span class="font-medium text-primary">&dollar;</span>
+                                <span class="text-3xl text-primaryDark font-bold">300</span>
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 md:gap-6">
+                            <p class="text-base flex flex-wrap gap-1 leading-5">
+                                <span class="text-slate-900">Start Date: 12/12/2020</span>
+                                <span class="text-slate-900">End Date: 12/12/2020</span>
+                            </p>
+                            <p class="text-base flex flex-wrap gap-1 leading-5">
+                                <span class="text-slate-900">Booked On: </span>
+                                <span class="text-slate-900">12/12/2020</span>
+                            </p>
+                        </div>
+                        <p class="text-base flex flex-wrap gap-1 leading-5 font-medium text-primary">
+                            <span class="text-slate-900">Completed</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid gap-2 px-2">
+                <h3 class="text-2xl text-primaryDark font-semibold">Car Hire</h3>
+                <hr>
+                <div class="grid gap-2">
+                    <div class="grid gap-1 p-2 px-4 rounded-md border border-solid border-slate-300">
+                        <div class="flex justify-between gap-0.5">
+                            <h3 class="text-xl font-medium text-primaryDark leading-8">
+                                Toyota Landcruser 2008
+                            </h3>
+                            <p class="text-xl font-semibold flex gap-0.5 items-baseline leading-8">
+                                <span class="font-medium text-primary">&dollar;</span>
+                                <span class="text-3xl text-primaryDark font-bold">100</span>
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 md:gap-6">
+                            <p class="text-base flex flex-wrap gap-1 leading-5">
+                                <span class="text-slate-900">Start Date: 12/12/2020</span>
+                                <span class="text-slate-900">End Date: 12/12/2020</span>
+                            </p>
+                            <p class="text-base flex flex-wrap gap-1 leading-5">
+                                <span class="text-slate-900">Booked On: </span>
+                                <span class="text-slate-900">12/12/2020</span>
+                            </p>
+                        </div>
+                        <p class="text-base flex flex-wrap gap-1 leading-5 font-medium text-primary">
+                            <span class="text-slate-900">Completed</span>
+                        </p>
+                    </div>
+                    <div class="grid gap-1 p-2 px-4 rounded-md border border-solid border-slate-300">
+                        <div class="flex justify-between gap-0.5">
+                            <h3 class="text-xl font-medium text-primaryDark leading-8">
+                                Toyota Corona 2008
+                            </h3>
+                            <p class="text-xl font-semibold flex gap-0.5 items-baseline leading-8">
+                                <span class="font-medium text-primary">&dollar;</span>
+                                <span class="text-3xl text-primaryDark font-bold">150</span>
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 md:gap-6">
+                            <p class="text-base flex flex-wrap gap-1 leading-5">
+                                <span class="text-slate-900">Start Date: 12/12/2020</span>
+                                <span class="text-slate-900">End Date: 12/12/2020</span>
+                            </p>
+                            <p class="text-base flex flex-wrap gap-1 leading-5">
+                                <span class="text-slate-900">Booked On: </span>
+                                <span class="text-slate-900">12/12/2020</span>
+                            </p>
+                        </div>
+                        <p class="text-base flex flex-wrap gap-1 leading-5 font-medium text-primary">
+                            <span class="text-slate-900">Completed</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- footer -->
+        <footer class="grid bg-headerBg mt-10">
+            <div class="container grid md:grid-cols-3 justify-evenly py-10 mx-auto text-center gap-5 px-5">
+                <div class="flex gap-2 flex-col p-3 items-center">
+                    <div class="grid section-heading gap-2 justify-items-center mx-auto">
+                        <h2 class="text-lg text-primary font-semibold capitalize">About Us</h2>
+                    </div>
+                    <p class="p-2 text-lg leading-6">
+                        Far far away, behind the word mountains, far from the countries 
+                    </p>
+
+                    <div class="flex flex-col gap-1">
+                        <span class="flex items-center gap-3">
+                            <i class="fa fa-phone text-primary"></i>
+                            <span>+256 774 234 503</span>
+                        </span>
+                        <span class="flex items-center gap-3">
+                            <i class="fa fa-envelope text-primary"></i>
+                            <span>infor@knsa.org</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="hidden md:flex gap-2 flex-col p-3 align-start">
+                    <div class="grid section-heading gap-2 justify-items-center items-start mx-auto">
+                        <h2 class="text-lg text-primary font-semibold capitalize">Links</h2>
+                    </div>
+                    <ul class="text-left self-center">
+                        <li>
+                            <a href="" class="p-1 font-medium flex items-center gap-2 hover:gap-3 transition-all transition-200 ease-in">
+                            <i class="fa fa-arrow-right text-primary"></i>
+                            <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="p-1 font-medium flex items-center gap-2 hover:gap-3 transition-all transition-200 ease-in">
+                            <i class="fa fa-arrow-right text-primary"></i>
+                            <span>Destinations</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="p-1 font-medium flex items-center gap-2 hover:gap-3 transition-all transition-200 ease-in">
+                            <i class="fa fa-arrow-right text-primary"></i>
+                            <span>Car Hire</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="p-1 font-medium flex items-center gap-2 hover:gap-3 transition-all transition-200 ease-in">
+                            <i class="fa fa-arrow-right text-primary"></i>
+                            <span>Admin</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex gap-2 flex-col p-3 items-center">
+                    <div class="grid section-heading gap-2 justify-items-center items-start mx-auto">
+                        <h2 class="text-lg text-primary font-semibold capitalize">Our Socials</h2>
+                    </div>
+                    
+                    <p class="p-2 text-lg leading-6">
+                        Subscribe and follow us via our social media platforms
+                    </p>
+                    
+                    <div class="icons flex gap-3">
+                        <a href="">
+                            <i class="fa fa-facebook bg-primary rounded-full py-2.5 px-3 text-white hover:bg-primaryDark transition-all transition-200 ease-in"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-instagram bg-primary rounded-full py-2.5 px-3 text-white hover:bg-primaryDark transition-all transition-200 ease-in"></i>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-twitter bg-primary rounded-full py-2.5 px-3 text-white hover:bg-primaryDark transition-all transition-200 ease-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid justify-center bg-primary text-white py-5 px-10 text-center">
+                <p>
+                    Copyright &copy; <script>document.write(new Date().getFullYear())</script>, All rights reserved. Property of knsa.org
+                </p>
+            </div>
+        </footer>
+
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>
