@@ -339,7 +339,7 @@ header .md-tabs.open {
     .destination-detail .img-wrapper,
     .destination-detail .img-wrapper img {
         overflow: hidden;
-        /* aspect-ratio: 1/1.; */
+        height: 50vh;
     }
     .destination-imgs #img-source {
         bottom: 10px;
