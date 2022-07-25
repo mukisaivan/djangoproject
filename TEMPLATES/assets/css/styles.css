@@ -42,6 +42,12 @@ header .md-tabs.open {
     display: grid;
 }
 
+@media (max-width: 786px) {
+    header {
+        height: 12vh;
+    }
+}
+
 /* hero section */
 .hero {
     display: grid;
