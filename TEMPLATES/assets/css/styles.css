@@ -79,6 +79,12 @@ header .md-tabs.open {
     z-index: -100;
 }
 
+@media (max-width: 786px) {
+    .hero::before {
+        opacity: 1;
+    }
+}
+
 .hero:hover::before {
     opacity: 1;
 }
