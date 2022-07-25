@@ -336,14 +336,15 @@ header .md-tabs.open {
         height: auto;
         width: 100vw;
     }
-    .destination-detail .img-wrapper {
+    .destination-detail .img-wrapper,
+    .destination-detail .img-wrapper img {
         overflow: hidden;
-        height: 70vh;
+        /* aspect-ratio: 1/1.; */
     }
     .destination-imgs #img-source {
-        bottom: 5px;
-        left: 50px;
-        width: 25ch;
+        bottom: 10px;
+        right: 30%;
+        width: 30ch;
         overflow: hidden;
     }
 }
