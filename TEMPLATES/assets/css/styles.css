@@ -371,3 +371,7 @@ header .md-tabs.open {
     height: 100%;
 }
 
+.auth-form {
+    box-shadow: 2px 2px 2px rgba(146, 144, 144, 0.404), -2px -2px 2px rgba(146, 144, 144, 0.404);
+    background-color: white;
+}
