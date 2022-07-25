@@ -288,6 +288,8 @@ header .md-tabs.open {
     width: 100%;
     padding: 1rem 1rem;
     transition: .3s ease-in-out;
+    display: flex;
+    gap: 2.5px;
 }
 
 .destination-card:hover .card-body {
