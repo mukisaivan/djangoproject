@@ -5,6 +5,8 @@ from django.core.paginator import Paginator
 
 from eruna import models
 
+from booking.models import VacationBooking, CarBooking
+
 # Create your views here.
 class homePageView(View):
     template = 'eruna/index.html'
@@ -22,7 +24,6 @@ class homePageView(View):
             Q(destination__id__gte = destinations[len(destinations) - 1].id),
             Q(destination__id__lte = destinations[SLICE_LOWER].id)
         )
-        print('destination_cover_imgs', destination_cover_imgs)
 
         car_cover_imgs = models.CarImage.objects.filter(
             Q(car__id__gte = cars[len(cars) - 1].id),
@@ -67,6 +68,26 @@ class DestinationListView(View):
 
         return render(request, self.template, context=content_data)
 
+class DestinationDetialView(View):
+    template = './eruna/destination.html'
+    queryset = models.Destination
+
+    def get(self, request, slug):
+        destination = self.queryset.objects.filter(slug=slug).first()
+        images = models.DestinationImage.objects.filter(destination=destination)
+
+        booking_exists = False
+        if VacationBooking.objects.filter(Q(user_id = request.user.id), Q(destination = destination) | Q(is_complete = False)):
+            booking_exists = True
+
+
+        content_data = {
+            'destination' : destination,
+            'images' : images,
+            'booking_exists' : booking_exists
+        }
+
+        return render(request, self.template, context=content_data)
 
 class CarListView(View):
     template = './eruna/cars.html'
@@ -76,7 +97,7 @@ class CarListView(View):
 
         PER_PAGE_COUNT = 6
 
-        paginator = Paginator(self.queryset.objects.all().order_by('-id'), PER_PAGE_COUNT)
+        paginator = Paginator(self.queryset.objects.filter(is_available=True).order_by('-id'), PER_PAGE_COUNT)
 
         # get current page number
         page_num = request.GET.get('page', 1)

@@ -126,3 +126,4 @@ if (window.location.href.includes('destination'))
 {
     setDetailImg();
 }
+

@@ -1,15 +1,15 @@
 {% block content %}
 
-<section class="min-h-screen grid gap-5 my-10 w-10/12 md:w-9/12 mx-auto content-start justify-center">
+<section class="min-h-screen grid gap-6 my-10 w-10/12 md:w-9/12 mx-auto content-start justify-center">
     <div class="section-header grid gap-1 text-center justify-center">
-        <h3 class="text-3xl font-semibold text-primaryDark">Our Destinations</h3>
+        <h3 class="text-3xl font-semibold text-primaryDark leading-7">Our Destinations</h3>
         <p class="text-xl leading-6 text-gray-600 md:w-10/12 mx-auto">
-            With our talent travel gruides, Eruna Safaris makes exploring Uganda very easy.
+            With our talented travel gruides, Eruna Safaris makes exploring Uganda very easy.
         </p>
     </div>
     <div class="container grid gap-6 md:grid-cols-3">
         {% for destination in destinations %}
-            <a href="./destination.html" class="destination-card">
+            <a href="{% url 'eruna:destination-detail' destination.slug %}" class="destination-card">
                 <div class="img-wrapper">
                     {% for img in destination_cover_imgs %}
                         {% if img.destination.name == destination.name %}

@@ -101,8 +101,10 @@ class RentalCar(models.Model):
     seats = models.IntegerField(
         _('Number of Seats')
     )
-    price = models.IntegerField(
-        _('Cost of hire')
+    price = models.DecimalField(
+        _('Cost of hire'),
+        decimal_places=2,
+        max_digits=6
     )
     is_available = models.BooleanField(
         _('Is Available'),
@@ -160,8 +162,10 @@ class Lounge(models.Model):
         _('Destination Location'),
         max_length=256
     )
-    price = models.IntegerField(
-        _('Cost of Vacation')
+    price = models.DecimalField(
+        _('Cost of Vacation'),
+        decimal_places=2,
+        max_digits=6
     )
     distance = models.IntegerField(
         _('Distance From Kampala'),

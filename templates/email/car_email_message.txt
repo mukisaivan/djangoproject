@@ -1,0 +1,9 @@
+Hello, {{user.username}}
+Here is a summary of you Car Hire with Eruna Safaris.
+
+Car: {{booking.car.name|safe}}
+Total Price: {{booking.total_price|safe}}
+Start Date: {{booking.start_date|safe}}
+End Date: {{booking.end_date|safe}}
+
+Thank you!

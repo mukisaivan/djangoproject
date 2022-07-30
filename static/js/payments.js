@@ -27,12 +27,12 @@ paypal.Buttons({
 
     // Sets up the transaction when a payment button is clicked
 
-    createOrder: (data, actions) => {    
+    createOrder: (data, actions) => { 
         return actions.order.create({    
             purchase_units: [{    
                 amount: {
                     currency_code: 'USD',
-                    value: '100'    
+                    value: document.querySelector('#total-price')
                 }    
             }]    
         });    
