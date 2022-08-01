@@ -19,16 +19,21 @@ class homePageView(View):
         destinations = models.Destination.objects.all().order_by('-id')[:SLICE_UPPER]
         cars = models.RentalCar.objects.all().order_by('-id')[:SLICE_UPPER]
 
-        # get first image for each of the first 6 destinations
-        destination_cover_imgs = models.DestinationImage.objects.filter(
-            Q(destination__id__gte = destinations[len(destinations) - 1].id),
-            Q(destination__id__lte = destinations[SLICE_LOWER].id)
-        )
 
-        car_cover_imgs = models.CarImage.objects.filter(
-            Q(car__id__gte = cars[len(cars) - 1].id),
-            Q(car__id__lte = cars[SLICE_LOWER].id)
-        )
+        destination_cover_imgs = []
+        if models.Destination.objects.all().count() > 0:
+            # get first image for each of the first 6 destinations
+            destination_cover_imgs = models.DestinationImage.objects.filter(
+                Q(destination__id__gte = destinations[len(destinations) - 1].id),
+                Q(destination__id__lte = destinations[SLICE_LOWER].id)
+            )
+            
+        car_cover_imgs = []
+        if models.RentalCar.objects.all().count() > 0:
+            car_cover_imgs = models.CarImage.objects.filter(
+                Q(car__id__gte = cars[len(cars) - 1].id),
+                Q(car__id__lte = cars[SLICE_LOWER].id)
+            )
 
         content_data = {
             'page' : 'home',
@@ -51,14 +56,19 @@ class DestinationListView(View):
 
         paginator = Paginator(self.queryset.objects.all().order_by('-id'), PER_PAGE_COUNT)
 
-        # get current page number
-        page_num = request.GET.get('page', 1)
-        destinations = paginator.page(page_num).object_list
+        if self.queryset.objects.all().count() > 0:
 
-        destination_cover_imgs = models.DestinationImage.objects.filter(
-            Q(destination__id__gte = destinations[len(destinations) - 1].id),
-            Q(destination__id__lte = destinations[0].id)
-        )
+            # get current page number
+            page_num = request.GET.get('page', 1)
+            destinations = paginator.page(page_num).object_list
+
+            destination_cover_imgs = models.DestinationImage.objects.filter(
+                Q(destination__id__gte = destinations[len(destinations) - 1].id),
+                Q(destination__id__lte = destinations[0].id)
+            )
+
+        else:
+            destination_cover_imgs = []
 
         content_data = {
             'page_obj': paginator.page(page_num),
