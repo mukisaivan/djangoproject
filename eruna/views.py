@@ -56,11 +56,11 @@ class DestinationListView(View):
 
         paginator = Paginator(self.queryset.objects.all().order_by('-id'), PER_PAGE_COUNT)
 
+        # get current page number
         page_num = request.GET.get('page', 1)
+        destinations = paginator.page(page_num).object_list
         if self.queryset.objects.all().count() > 0:
 
-            # get current page number
-            destinations = paginator.page(page_num).object_list
 
             destination_cover_imgs = models.DestinationImage.objects.filter(
                 Q(destination__id__gte = destinations[len(destinations) - 1].id),
@@ -113,7 +113,8 @@ class CarListView(View):
         page_num = request.GET.get('page', 1)
         cars = paginator.page(page_num).object_list
 
-        if cars.count > 0:
+        car_cover_imgs = []
+        if cars.count() > 0:
             car_cover_imgs = models.CarImage.objects.filter(
                 Q(car__id__gte = cars[len(cars) - 1].id),
                 Q(car__id__lte = cars[0].id)
