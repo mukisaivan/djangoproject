@@ -67,47 +67,6 @@
                         <p class="text-center text-lg text-slate-700">No Vacations Found.</p>
                     {% endif %}
                 </div>
-                <div class="grid gap-2 px-2">
-                    <h3 class="text-2xl text-primaryDark font-semibold">Car Hire</h3>
-                    <hr>
-                    <div class="grid gap-2">
-                        {% for car in cars %}
-
-                            <div class="grid gap-1 p-2 px-4 rounded-md border border-solid border-slate-300">
-                                <div class="flex justify-between gap-0.5">
-                                    <h3 class="text-xl font-medium text-primaryDark leading-8">
-                                        {{ car.car.name }}
-                                    </h3>
-                                    <p class="text-xl font-semibold flex gap-0.5 items-baseline leading-8">
-                                        <span class="font-medium text-primary">&dollar;</span>
-                                        <span class="text-3xl text-primaryDark font-bold">{{ car.total_price }}</span>
-                                    </p>
-                                </div>
-                                <div class="flex flex-wrap gap-2 md:gap-6">
-                                    <p class="text-base flex flex-wrap gap-1 leading-5">
-                                        <span class="text-slate-900">Start Date: {{ car.start_date }}</span>
-                                        <span class="text-slate-900">End Date: {{ car.end_date }}</span>
-                                    </p>
-                                    <p class="text-base flex flex-wrap gap-1 leading-5">
-                                        <span class="text-slate-900">Booked On: </span>
-                                        <span class="text-slate-900">{{ car.added_on }}</span>
-                                    </p>
-                                </div>
-                                <p class="text-base flex flex-wrap gap-1 leading-5 font-medium text-primary">
-                                    {% if car.is_returned %}
-                                        <span class="text-slate-900">Completed</span>
-                                    {% else %}
-                                        <span class="text-slate-900">Pending</span>
-                                    {% endif %}
-                                </p>
-                            </div>
-                        {% endfor %}
-                    </div>
-
-                    {% if not cars %}
-                        <p class="text-center text-lg text-slate-700">No Cars Found.</p>
-                    {% endif %}
-                </div>
             {% endif %}
             
         </section>

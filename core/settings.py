@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_KEY')
+SECRET_KEY = "bnvwoeivnweoin"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,15 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'eruna.apps.ErunaConfig',
-    'booking.apps.BookingConfig',
-    'auth_app.apps.AuthAppConfig',
-    
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.facebook',
+    'eruna',
+    'booking',
+    'auth_app',
 ]
 
 MIDDLEWARE = [

@@ -1,9 +1,0 @@
-Hello, {{user.username}}
-Here is a summary of you Vacation booking
-
-Destination: {{booking.destination.name|safe}}
-Total Price: {{booking.total_price|safe}}
-Start Date: {{booking.start_date|safe}}
-End Date: {{booking.end_date|safe}}
-
-Thank you!

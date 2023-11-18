@@ -82,9 +82,6 @@
                         <a href="{% url 'eruna:destinations' %}" class="text-xl font-medium text-primary hover:text-primaryDark">Destinations</a>
                     </li>
                     <li>
-                        <a href="{% url 'eruna:cars' %}" class="text-xl font-medium text-primary hover:text-primaryDark">Car Hire</a>
-                    </li>
-                    <li>
                         <a href="{% url 'booking:bookings' %}" class="text-xl font-medium text-primary hover:text-primaryDark">Bookings</a>
                     </li>
                     {% if user.is_authenticated %}
@@ -107,9 +104,6 @@
                 </li>
                 <li class="grid">
                     <a href="{% url 'eruna:destinations' %}" class="text-xl grid justify-center items-center font-medium text-primary hover:text-primaryDark">Destinations</a>
-                </li>
-                <li class="grid">
-                    <a href="{% url 'eruna:cars' %}" class="text-xl grid justify-center items-center text-primary hover:text-primaryDark">Car Hire</a>
                 </li>
                 <li class="grid">
                     <a href="{% url 'booking:bookings' %}" class="text-xl grid justify-center items-center text-primary hover:text-primaryDark">Bookings</a>
@@ -168,12 +162,6 @@
                             <a href="{% url 'eruna:destinations' %}" class="p-1 font-medium flex items-center gap-2 hover:gap-3 transition-all transition-200 ease-in">
                             <i class="fa fa-arrow-right text-primary"></i>
                             <span>Destinations</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{% url 'eruna:cars' %}" class="p-1 font-medium flex items-center gap-2 hover:gap-3 transition-all transition-200 ease-in">
-                            <i class="fa fa-arrow-right text-primary"></i>
-                            <span>Car Hire</span>
                             </a>
                         </li>
                         <li>
